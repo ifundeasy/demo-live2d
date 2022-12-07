@@ -5,4 +5,4 @@
 * Nodejs >= 16.6
 
 ## demo
-https://ifundeasy.github.com/demo-live2d?model=hiyori
+https://ifundeasy.github.io/demo-live2d?model=hiyori
