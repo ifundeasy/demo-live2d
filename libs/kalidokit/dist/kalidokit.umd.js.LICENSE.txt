@@ -1,0 +1,9 @@
+/**
+ * @kalidokit v1.1.5
+ * Blendshape and kinematics calculator for Mediapipe/Tensorflow.js Face, Eyes, Pose, and Finger tracking models.
+ * 
+ * @license
+ * Copyright (c) 2020-2021 yeemachine
+ * SPDX-License-Idntifier: MIT 
+ * https://github.com/yeemachine/kalidokit#readme
+ */
