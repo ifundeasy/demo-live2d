@@ -126,7 +126,7 @@ const receiveAnimation = (event) => {
 };
 
 (async function main() {
-  console.log(`Environment: ${PRODUCTION}`);
+  console.log(`Is Production: ${PRODUCTION}`);
 
   // create pixi application
   const app = new PIXI.Application({

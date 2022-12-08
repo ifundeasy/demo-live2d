@@ -67,7 +67,7 @@ const sendAnimation = (points) => {
 };
 
 (async function main() {
-  console.log(`Environment: ${PRODUCTION}`);
+  console.log(`Is Production: ${PRODUCTION}`);
 
   flipButton.addEventListener('click', () => {
     console.log('clicked!')
