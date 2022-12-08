@@ -5,10 +5,12 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   mode: process.env.NODE_ENV,
   context: path.resolve(__dirname, 'src'),
-  entry: './scripts/index.js',
+  entry: {
+    index: './scripts/index.js',
+    renderer: './scripts/renderer.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'scripts/index.js',
+    path: path.resolve(__dirname, 'dist/scripts')
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -19,7 +21,14 @@ module.exports = {
       patterns: [
         {
           from: '**/*',
-          filter: (filepath) => filepath !== path.resolve(__dirname, 'src', 'models.js'),
+          filter: (filepath) => {
+            const excluded = [
+              'scripts/index.js',
+              'scripts/renderer.js',
+              'models.js',
+            ].map(file => path.resolve(__dirname, 'src', file))
+            return excluded.indexOf(filepath) === -1
+          },
           to: path.resolve(__dirname, 'dist/')
         },
         {

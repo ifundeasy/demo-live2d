@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Live2D on Browser</title>
-  <meta name="description" content="Track face and body rigs just your browser webcam!" />
+  <title>Live2D on Browser [Renderer]</title>
   <meta name="viewport"
     content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
 
@@ -22,20 +21,17 @@
 </head>
 
 <body>
-  <iframe id="other" src="renderer.html"></iframe>
-  <div class="preview">
-    <button id="flipper">Flip</button>
-    <video class="input_video" width="1280px" height="720px"></video>
-    <canvas class="guides"></canvas>
-    <iframe id="self" src="renderer.html"></iframe>
-  </div>
-  <!-- Mediapipe Drawing Tools -->
-  <script src="libs/@mediapipe/drawing_utils/drawing_utils.js"></script>
-  <!-- Mediapipe Camera Tools -->
-  <script src="libs/@mediapipe/camera_utils/camera_utils.js"></script>
-  <!-- Mediapipe Face Mesh -->
-  <script src="libs/@mediapipe/face_mesh/face_mesh.js"></script>
-  <script src="scripts/index.js"></script>
+  <canvas id="live2d"></canvas>
+  <!-- Live2D SDK  -->
+  <script src="libs/live2dcubismcore.min.js"></script>
+  <script src="libs/webgl-live2d.min.js"></script>
+  <!-- PixiJS Renderer -->
+  <script src="libs/pixi.js/dist/pixi.min.js"></script>
+  <!-- PixiJS Live2D Plugin -->
+  <script src="libs/pixi-live2d-display/dist/index.min.js"></script>
+  <!-- Kalidokit Kinematic Solver -->
+  <script src="libs/kalidokit/dist/kalidokit.umd.js"></script>
+  <script src="scripts/renderer.js"></script>
 </body>
 
 </html>
