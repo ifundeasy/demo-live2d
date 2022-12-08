@@ -37,7 +37,7 @@ const videoElement = document.querySelector('.input_video');
 const guideCanvas = document.querySelector('canvas.guides');
 
 (async function main() {
-  console.log(`Environment: ${PRODUCTION}`);
+  console.log(`Is Production: ${PRODUCTION}`);
 
   // create pixi application
   const app = new PIXI.Application({
